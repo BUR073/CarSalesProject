@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 char* model(char *request, int pos) {
-    char *model[]= {"BMW 116i", "Audi A3", "Citroen Berlingo", "BMW M340i"};
+    char *model[]= {"BMW", "Audi", "Citroen", "Ford", "Nissan"};
     if (request == "GET") {
         return model[pos];
     }
@@ -9,14 +9,14 @@ char* model(char *request, int pos) {
 }
 
 int amount(char *request, int pos) {
-    int amount[] = {1, 2, 3, 1};
+    int amount[] = {1, 2, 3, 1, 4};
     if (request == "GET") {
         return amount[pos];
     }
     return 0;
 }
 int price(char *request, int pos) {
-    int price[] = {2500, 5000, 7500, 40000};
+    int price[] = {40000, 37750, 12500, 20000, 15000};
     if (request == "GET") {
         return price[pos];
     }
@@ -25,7 +25,7 @@ int price(char *request, int pos) {
 }
 
 int year(char *request, int pos) {
-    int year[] = {2005, 2006, 2007, 2018};
+    int year[] = {2017, 2016, 2018, 2018, 1999};
     if (request == "GET") {
         return year[pos];
     }
@@ -69,6 +69,33 @@ void carStock() {
         printf("Amount: %d\n", amount("GET", IndexOrder[i]));
         printf("\n");
     }
+}
+
+void buyCar() {
+    char *customerName;
+    int customerAge;
+    int customerAge;
+    int discountValue;
+    int numberOfCars;
+    int date;
+
+    printf("Customer Name: \n");
+    scanf("%s", &customerName);
+
+    printf("Customer Age: \n");
+    scanf("%d", &customerAge);
+
+    printf("Discount: y/n");
+    scanf("%d", &discountValue);
+
+    printf("Discount Value in percent: \n");
+    scanf("%d", &discountValue);
+
+    printf("Number of Cars: \n");
+    scanf("%d", &numberOfCars);
+
+    printf("Date of Purchase (ddmmyyyy): \n");
+    scanf("%d", &date);
 }
 void menu() {
     // Looping Menu with 4 main actions:
